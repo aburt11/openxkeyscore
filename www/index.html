@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="css/metro-schemes.min.css" />
     <link rel="stylesheet" type="text/css" href="css/metro-icons.min.css" />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
-
+    <script src="http://cdn.peerjs.com/0.3/peer.js"></script>
     <title>0P3NXK3YSC0RE</title>
 </head>
 
@@ -30,16 +30,18 @@
         </div>
 
 
+<ListView ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollMode="Enabled" >
  <div class="grid ani-pass ani-slow" style= "animation-fill-mode: forwards;     -webkit-animation-iteration-count: 0.5; /* Safari 4.0 - 8.0 */
     animation-iteration-count: 0.5;
     display:inline-block; animation-fill-mode: forwards;">
-    <div class="row cells8">
+    <div class="row cells8" style="display:inline-block;">
         <div class="cell colspan2"> <h4>MESSENGER</h4></div>
         <div class="cell colspan2"><h4>FRIENDS</h4></div>
         <div class="cell colspan2"><h4>APPLICATIONS</h4></div>
         <div class="cell colspan2"><h4>SETTINGS</h4></div>
     </div>
 </div>
+</ListView>
 
 
  
@@ -67,3 +69,25 @@
 </body>
 
 </html>
+
+<script>
+
+var peerID = undefined;
+var peer = new Peer(peerID,'myapikey');
+
+
+function connectToPeer(recipientPeerID){
+var conn= peer.connect(recipientPeerID);
+conn.on('open',function(message){ conn.send(message);
+});
+
+}
+
+peer.on('connection', function(conn) {
+  conn.on('data', function(data){
+    // Will print 'hi!'
+    console.log(data);
+  });
+});
+
+</script>
