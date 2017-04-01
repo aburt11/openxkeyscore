@@ -1,0 +1,61 @@
+{
+  "author": {
+    "name": "Sergey Pimenov"
+  },
+  "name": "phonegap-metro-template",
+  "version": "3.0.15",
+  "description": "Starter PhoneGap project using Metro UI CSS",
+  "keywords": [
+    "phonegap",
+    "metro",
+    "metro ui",
+    "metro ui css",
+    "css",
+    "less",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "web",
+    "metro"
+  ],
+  "homepage": "http://metroui.org.ua",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olton/phonegap-metro-template.git"
+  },
+  "bugs": {
+    "url": "http://forum.metroui.org.ua"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "http://metroui.org.ua/license.html"
+  },
+  "gitHead": "cd93075f61f5499b5bfe1160e2eba3eaf6852503",
+  "_id": "phonegap-metro-template@3.0.15",
+  "scripts": {},
+  "_shasum": "170993b72a3a5175c752fdffe6c88fdf48ebd82a",
+  "_from": "phonegap-metro-template@latest",
+  "_npmVersion": "3.3.6",
+  "_nodeVersion": "5.0.0",
+  "_npmUser": {
+    "name": "olton",
+    "email": "sergey@pimenov.com.ua"
+  },
+  "dist": {
+    "shasum": "170993b72a3a5175c752fdffe6c88fdf48ebd82a",
+    "tarball": "https://registry.npmjs.org/phonegap-metro-template/-/phonegap-metro-template-3.0.15.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "olton",
+      "email": "sergey@pimenov.com.ua"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/phonegap-metro-template-3.0.15.tgz_1462291680056_0.8668141223024577"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/phonegap-metro-template/-/phonegap-metro-template-3.0.15.tgz"
+}

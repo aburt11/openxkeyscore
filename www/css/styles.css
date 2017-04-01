@@ -1,0 +1,239 @@
+/*
+   statusbar-overlay sets the background color for the overlay. Black text is the default when the statusbar plugin is not added. When the
+   statusbar plugin is added, it also adds default setting to make the content white via:
+
+       <preference name="StatusBarStyle" value="lightcontent"/>
+
+   Setting the background color to black will allow the default light content (white text/icons) to show on it. The statusbar plugin is included
+   in the config.xml file and will be added by the CLI when you build locally.
+
+   See https://github.com/apache/cordova-plugin-statusbar
+*/
+
+.statusbar-overlay {
+    background: #000000;
+}
+
+html{
+height:100%;
+box-sizing:border-box;
+    margin: auto;
+    width: 100%;
+
+
+
+}
+
+body{
+background:#000 !important;
+position: relative;
+margin: 0 auto;
+padding-bottom: 6rem;
+min-height: 100%;
+max-width: 400%;
+}
+
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.home_shoutout{
+background:black;
+display: inline-block;
+}
+
+.home_dock{
+  margin: 0 auto;
+  padding-top: 64px;
+  max-width: 640px;
+  width: 100%;
+
+}
+
+
+h1,h2,h3,h4,h5,h6,p,span{
+	color:#FFF;
+	text-align: left;
+
+
+
+}
+
+
+
+nav {
+	    margin: auto;
+    width: 50%;
+    border: 3px solid black;
+    padding: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: auto;
+  min-width: 450px;
+  max-width:1920px;
+  box-sizing: border-box;
+  padding: 4px;
+  background: rgba(255,255,255,0.2);
+  transform: translateX(-50%);
+  border-radius: 5px 5px 0 0;
+
+
+}
+
+nav hr {
+  display: inline-block;
+  width: 1px;
+  background: #274846;
+  height: 85%;
+  vertical-align: top;
+  margin-top: 3px;
+  border: none;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+nav .icon {
+	    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+	text-align: center;
+padding-left:50px;
+
+margin-top: 40px;
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: 50%;
+  border: none;
+  transition: 0.5s;
+    -webkit-column-span: all; /* Chrome, Safari, Opera */
+    column-span: all;
+}
+
+nav img {
+  width: auto;
+  height: 50%;
+  margin:auto;
+  transition: 0.5s;
+}
+
+label {
+  position: absolute;
+  margin-top: -50px;
+  color: #050505;
+  font-family: Helvetica, calibri, sans-serif;
+  font-weight: 100;
+  font-size: 14px;
+  background: #F6F6F6;
+  padding: 5px 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  z-index: 100;
+  display: none;
+}
+
+label::before,
+label::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  border-radius: 1px;
+  background: #F6F6F6;
+  z-index: -1;
+}
+
+label::before {
+  bottom: -5px;
+  transform: translateX(-50%) rotateZ(45deg);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+}
+
+label::after {
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 40px;
+  height: 20px;
+}
+
+nav .icon:hover > label {
+  display: block;
+  opacity: 0.75;
+}
+
+nav .icon:focus {
+  outline: none;
+  -webkit-animation: translate-animation 2.5s linear;
+  -moz-animation: translate-animation 2.5s linear;
+  animation: translate-animation 2.5s linear;
+}
+
+nav .icon:focus .dot {
+  transform: translate(0, 0);
+  -webkit-animation: translate-animation-reverse 2.5s linear;
+  -moz-animation: translate-animation-reverse 2.5s linear;
+  animation: translate-animation-reverse 2.5s linear;
+}
+
+nav .icon:focus .dot::before {
+  content: "";
+  position: fixed;
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: black;
+}
+
+@keyframes translate-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(0, -15px);
+  }
+  40% {
+    transform: translate(0, 0);
+  }
+  60% {
+    transform: translate(0, -15px);
+  }
+  80% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes translate-animation-reverse {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(0, 15px);
+  }
+  40% {
+    transform: translate(0, 0);
+  }
+  60% {
+    transform: translate(0, 15px);
+  }
+  80% {
+    transform: translate(0, 0);
+  }
+}
+
+@supports ((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))) {
+  nav {
+    background: none;
+    -webkit-backdrop-filter: saturate(50%) blur(20px) brightness(200%);
+    backdrop-filter: saturate(50%) blur(20px) brightness(200%)
+  }
+}
